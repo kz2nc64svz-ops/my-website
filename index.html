@@ -3,42 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - My Website</title>
+    <title>Razon | Retail Revenue Ops Intelligence Agent</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Custom styles to ensure Inter font is used and smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            /* Changed body background and default text color for dark mode */
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb; /* Light gray text */
+            padding-bottom: 5rem; /* Space for sticky footer */
         }
-        .container {
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            text-align: center;
+        /* Custom blue gradient for the CTA button */
+        .cta-gradient {
+            background-image: linear-gradient(to right, #4c51bf, #6b46c1);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        h1 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        p {
-            color: #666;
-            font-size: 18px;
+        .cta-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(76, 81, 191, 0.5), 0 4px 6px -2px rgba(76, 81, 191, 0.05);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Welcome to My Website</h1>
-        <p>Your website is live on GitHub Pages!</p>
-        <p>Hosted at: <strong>https://kz2nc64svz-ops.github.io/my-website/</strong></p>
-    </div>
+<body class="bg-gray-900">
+
+    <!-- Header / Sticky Nav -->
+    <header class="shadow-lg border-b border-gray-800 sticky top-0 bg-gray-900/95 backdrop-blur-sm z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tight text-indigo-400">Razon</a>
+            <!-- Simple nav for this single page -->
+            <nav class="hidden md:flex space-x-8 text-gray-300 font-medium">
+                <a href="#problem" class="hover:text-indigo-400 transition">The Problem</a>
+                <a href="#solutions" class="hover:text-indigo-400 transition">Solutions</a>
+                <a href="#benefits" class="hover:text-indigo-400 transition">Benefits</a>
+            </nav>
+            <a href="#cta-footer" class="hidden sm:inline-block px-4 py-2 text-sm font-semibold rounded-lg text-white cta-gradient shadow-md hover:shadow-lg">
+                Book Your Spot
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Main Banner/Above-the-Fold -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24 md:pt-24 md:pb-32 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="order-2 md:order-1">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+                    Meet <span class="text-indigo-400">Razon</span>: Your Companion for Retail Revenue Intelligence
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl text-gray-300 max-w-lg font-medium p-4 bg-indigo-900/50 border-l-4 border-indigo-500 rounded-lg shadow-lg">
+                    Retailers using AI agents experience <strong class="text-indigo-300">5–15% revenue growth</strong> and <strong class="text-indigo-300">72% cost reduction</strong> annually.
+                </p>
+                <a href="#cta-footer" class="mt-10 inline-block px-10 py-4 text-lg font-bold rounded-xl text-white cta-gradient shadow-xl shadow-indigo-600/50 transform hover:scale-[1.02] transition duration-300 ease-in-out">
+                    Join Our Limited Cohort — Book Your Spot
+                </a>
+            </div>
+
+            <!-- Visual Placeholder (Order 1 on Desktop) -->
+            <div class="order-1 md:order-2 flex justify-center">
+                <!-- Simple, clean SVG illustration representing data and companionship -->
+                <svg viewBox="0 0 500 500" class="w-full max-w-sm lg:max-w-md h-auto" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="razonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#818CF8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Base Companion Shape (A friendly, rounded digital assistant) -->
+                    <rect x="150" y="100" width="200" height="300" rx="40" fill="url(#razonGradient)" class="shadow-2xl"/>
+                    <rect x="180" y="130" width="140" height="180" rx="20" fill="#E0F2F1" opacity="0.15"/>
+                    <!-- Eyes/Lens -->
+                    <circle cx="210" cy="180" r="10" fill="white"/>
+                    <circle cx="290" cy="180" r="10" fill="white"/>
+                    <!-- Data Activity/Chart -->
+                    <polyline points="180,350 220,320 250,340 280,310 320,330" fill="none" stroke="#A5B4FC" stroke-width="8" stroke-linecap="round"/>
+                    <!-- Retail Icon (Shopping Cart) -->
+                    <path d="M 230 350 L 270 350 L 290 380 L 210 380 Z" fill="#C4B5FD"/>
+                    <circle cx="235" cy="385" r="5" fill="#312E81"/>
+                    <circle cx="285" cy="385" r="5" fill="#312E81"/>
+                    <!-- Floating Data Points -->
+                    <circle cx="100" cy="200" r="15" fill="#34D399" opacity="0.8"/>
+                    <rect x="370" y="250" width="30" height="30" rx="8" fill="#FBBF24" opacity="0.8"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Why Razon? | The Problem (Short & Numerical) -->
+        <section id="problem" class="bg-gray-800 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-12">
+                    The Retail Industry Challenge
+                </h2>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                    <!-- Problem Card 1: Shrinkage -->
+                    <div class="bg-gray-700 p-6 rounded-2xl shadow-xl border-t-4 border-red-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 inline-block">📉</span>
+                        <p class="text-2xl font-bold text-white mt-2">$112B problem globally.</p>
+                        <p class="text-gray-300 mt-1">Retail shrinkage remains a massive issue.</p>
+                    </div>
+
+                    <!-- Problem Card 2: Siloed Data -->
+                    <div class="bg-gray-700 p-6 rounded-2xl shadow-xl border-t-4 border-blue-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 inline-block">🗃️</span>
+                        <p class="text-2xl font-bold text-white mt-2">54% struggle with siloed data.</p>
+                        <p class="text-gray-300 mt-1">Lack of unified, omnichannel data visibility.</p>
+                    </div>
+
+                    <!-- Problem Card 3: Delivery Expectation -->
+                    <div class="bg-gray-700 p-6 rounded-2xl shadow-xl border-t-4 border-green-500 hover:shadow-2xl transition duration-300">
+                        <span class="text-5xl mb-4 inline-block">⏱️</span>
+                        <p class="text-2xl font-bold text-white mt-2">40% expect same-day delivery.</p>
+                        <p class="text-gray-300 mt-1">Operational agility fails to meet modern urban buyer expectations.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Razon’s Personality -->
+        <section class="py-16 md:py-24">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-white mb-6">Your Always-On Revenue Companion</h2>
+                <div class="max-w-3xl mx-auto bg-indigo-900/50 border-l-8 border-indigo-600 p-8 rounded-2xl shadow-lg">
+                    <p class="text-xl italic text-gray-300">
+                        "Razon works **with you**—not just for you. Think of us as your revenue intelligence companion, always by your side to spot issues, prioritize actions, and unlock growth across every channel."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Three Solutions, Backed by Industry Research -->
+        <section id="solutions" class="bg-gray-900 py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white text-center mb-16">
+                    Three Ways Razon Drives Growth
+                </h2>
+
+                <div class="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-10">
+
+                    <!-- Solution Card 1: Personalization -->
+                    <div class="group bg-gray-700 rounded-2xl shadow-2xl p-8 transform hover:scale-[1.03] transition duration-300 border-t-8 border-violet-500">
+                        <div class="text-5xl mb-4 text-violet-400">
+                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Hyper-Personalized Retail Journeys</h3>
+                        <p class="mt-4 text-gray-300">Razon analyzes customer intent, history, and real-time activity to deliver unique product recommendations and offers across all touchpoints.</p>
+                        <div class="mt-6 p-4 rounded-xl bg-violet-900/50 font-bold text-violet-300">
+                            Uplift: <span class="text-3xl font-extrabold ml-2">10–20%</span> conversion increase.
+                        </div>
+                        <p class="mt-4 text-sm text-gray-400 italic">
+                            Consulting Insight: McKinsey: AI-driven personalization increases conversion by 20% on average.
+                        </p>
+                    </div>
+
+                    <!-- Solution Card 2: Inventory Optimization -->
+                    <div class="group bg-gray-700 rounded-2xl shadow-2xl p-8 transform hover:scale-[1.03] transition duration-300 border-t-8 border-blue-500">
+                        <div class="text-5xl mb-4 text-blue-400">
+                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7h16M4 7L12 4l8 3M12 4v16" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Inventory & Supply Chain Optimization</h3>
+                        <p class="mt-4 text-gray-300">Accurate forecasting, dynamic pricing, and real-time stock allocation prevent stockouts and minimize carrying costs.</p>
+                        <div class="mt-6 p-4 rounded-xl bg-blue-900/50 font-bold text-blue-300">
+                            Uplift: <span class="text-3xl font-extrabold ml-2">25–40%</span> increase in inventory turns.
+                        </div>
+                        <p class="mt-4 text-sm text-gray-400 italic">
+                            Consulting Insight: Gartner: Improved inventory accuracy is the single largest driver of reduced working capital.
+                        </p>
+                    </div>
+
+                    <!-- Solution Card 3: Loss Prevention -->
+                    <div class="group bg-gray-700 rounded-2xl shadow-2xl p-8 transform hover:scale-[1.03] transition duration-300 border-t-8 border-green-500">
+                        <div class="text-5xl mb-4 text-green-400">
+                            <svg class="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.149-2.052-.418-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Proactive Loss Prevention</h3>
+                        <p class="mt-4 text-gray-300">Utilize predictive models to detect and flag high-risk transactions, minimizing fraud, policy abuse, and stock shrinkage before it occurs.</p>
+                        <div class="mt-6 p-4 rounded-xl bg-green-900/50 font-bold text-green-300">
+                            Uplift: <span class="text-3xl font-extrabold ml-2">30–40%</span> reduction in fraud or stockouts.
+                        </div>
+                        <p class="mt-4 text-sm text-gray-400 italic">
+                            Consulting Insight: Bain & Company: Proactive AI-based loss prevention systems yield significant ROI within the first year.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits for Companies -->
+        <section id="benefits" class="bg-gray-800 py-16 md:py-24 mt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold text-white mb-8">The Razon Advantage</h2>
+                <div class="max-w-4xl mx-auto text-2xl text-gray-300 space-y-4">
+                    <p>Boost margins, reduce operational complexity, delight your customers, and make every dollar count.</p>
+                    <p class="font-semibold text-indigo-400">Achieve true operational efficiency powered by intelligence.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Call to Action (Sticky Footer) -->
+    <a id="cta-footer" href="#cta-footer" class="fixed bottom-0 left-0 right-0 p-4 bg-indigo-700 text-white text-center text-lg font-bold shadow-2xl z-40 cta-gradient flex justify-center items-center rounded-t-xl transition duration-300">
+        <span class="animate-pulse mr-3">🔥</span>
+        Only a Few Spots Left in Our Early Cohort—Join Now
+        <span class="animate-pulse ml-3">🔥</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white pt-10 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8">
+                <div>
+                    <h3 class="text-2xl font-extrabold tracking-tight text-indigo-400 mb-4">Razon</h3>
+                    <p class="text-sm text-gray-400">Retail Revenue Intelligence.</p>
+                </div>
+
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="text-lg font-semibold mb-4">Trust & Proof</h4>
+                    <p class="text-sm text-gray-400 italic">Trusted by retail innovators around the world.</p>
+                </div>
+
+                <div class="text-right md:text-left">
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-indigo-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center text-sm text-gray-500">
+                &copy; 2024 Razon. All rights reserved. | Reference: https://razon-growth-agent.lovable.app/
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
